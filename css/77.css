@@ -1,0 +1,278 @@
+@font-face{
+    font-family:'Arial';
+    src:url('../font/arial.ttf');
+}
+
+.face {
+    width: 216mm;
+    height: 154mm;
+    color: #000;
+    position: relative;
+    padding: 9mm;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+.face-back {
+}
+
+.face-front {
+    background-color: #fff;
+    padding: 4.7mm;
+}
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+p, span, div, td, table, h1, h2, h3, h4, h5, h6, * {
+    font-family: 'Arial', sans-serif;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.cover-image {
+    position: absolute;
+    top: -11.338582677px;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    width: 216mm;
+    height: 493px;
+}
+
+.body-img {
+    display: block;
+    width: 96.5mm;
+    height: 100mm;
+    float: left;
+}
+
+.h-spacer {
+    width: 1mm;
+}
+
+.one-img-layout .h-spacer {
+    width: 5mm;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 220px;
+    max-width: 355px;
+}
+
+.body-content {
+    max-width: 765px;
+    float: left;
+    width: 765px;
+}
+
+.copy-area {
+    margin-left: 15px;
+}
+
+.copy-area td {
+    vertical-align: top;
+}
+
+.copy-area .h-spacer {
+    width: 9.5mm;
+}
+
+.copy-area h2 {
+    font-size: 12pt;
+    overflow: hidden;
+    height: 18px;
+    width: 350px;
+}
+
+.copy-area p {
+    width: 532px;
+    font-size: 9pt;
+    overflow: hidden;
+    height: 70px;
+}
+
+.back-logo {
+    margin-top: 20px;
+    width: 167px;
+    margin-bottom: 15px;
+    display: block;
+    max-width: 167px;
+}
+
+.address {
+    font-size: 8.45pt;
+    margin-top: -7px;
+    display: block;
+}
+
+.guide-price {
+    font-size: 11.26pt !important;
+    font-weight: bold;
+    position: absolute;
+    bottom: 30px;
+    overflow: hidden;
+    height: 19px !important;
+}
+
+.address-info {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.address-tel {
+    margin-top: 14px;
+}
+
+
+.address-container {
+    position: absolute;
+    bottom: 21px;
+}
+
+.property-sub-header {
+    position: absolute;
+    bottom: 139px;
+    right: 248px;
+    z-index: 10000;
+    font-size: 11pt;
+    height: 16px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.body-img-x3 {
+    display: block;
+    width: 62.5mm;
+    height: 98mm;
+    float: left;
+}
+
+.one-img-layout {
+
+}
+
+.one-img-layout .body-img {
+    height: 136mm;
+}
+
+.one-img-layout td {
+    vertical-align: top;
+}
+
+.one-img-layout .guide-price {
+    bottom: 475px;
+    right: 264px;
+}
+
+.three-img-layout .property-sub-header {
+    bottom: 148px;
+}
+
+.three-img-layout .address-container {
+    position: absolute;
+    bottom: 31px;
+}
+
+.one-img-layout .guide-price.one-img-layout {
+    right: 261px !important;
+}
+
+.one-img-layout .address-container {
+    bottom: 33px;
+}
+
+.one-img-layout .half-body-text {
+    margin-top: 65px;
+    max-height: 270px;
+    overflow: hidden;
+    max-width: 307px;
+    width: 307px;
+    font-size: 9.46pt;
+    margin-right: 62px;
+}
+
+.one-img-layout .property-sub-header {
+    position: absolute;
+    bottom: 446px;
+    right: 242px !Important;
+    z-index: 10000;
+    font-size: 11pt;
+}
+
+.one-img-layout .property-sub-header.two-img-left {
+    right: 248px !important;
+}
+
+.two-img .v-spacer {
+    height: 3mm;
+}
+
+.two-img .body-img {
+    height: 66mm;
+    margin-left: 1mm;
+    width: 96.5mm;
+}
+
+.half-img-1 {
+    position: absolute;
+    top: 30px;
+}
+
+.half-img-2 {
+    position: relative;
+    bottom: -252px;
+}
+.property-sub-header.three-img-option {
+    bottom: 148px;
+}
+
+img[src*="empty"] {
+    position: relative;
+    overflow: hidden;
+}
+
+img[src*="empty"]::after {
+    content: 'IMAGE';
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    left: 0px;
+    color: #aaa;
+    font-size: 31pt;
+    letter-spacing: 2px;
+}
+
+img[src*="empty"]::before {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #d7d7d7;
+    content: "";
+}
