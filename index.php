@@ -20,7 +20,6 @@ Example: <h2 data-id="title">Data Driven Marketing</h2>.
 */
 
 if (isset($_POST['is_ajax']) && $_POST['is_ajax'] == 'yes') {
-    dd('hit');
     $attr = [
         'title' => 'Data Driven Marketing',
         'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores cumque dicta
@@ -37,7 +36,14 @@ if (isset($_POST['is_ajax']) && $_POST['is_ajax'] == 'yes') {
     ];
 
     //** Edit Part 1 **//
+    $content = file_get_contents("1.html");
 
+    echo json_encode(
+        [
+            "attr" => $attr,
+            "content" => $content
+        ]
+    );
     //** End Edit Part 1 **//
 } else {
     ?>
@@ -52,7 +58,7 @@ if (isset($_POST['is_ajax']) && $_POST['is_ajax'] == 'yes') {
 
 				#main_template_contect{
 					border: 1px solid black;
-					width: 50%;
+					width: 58%;
 					min-height: 500px;
 					margin: 0 auto;
 				}
@@ -64,34 +70,17 @@ if (isset($_POST['is_ajax']) && $_POST['is_ajax'] == 'yes') {
 
 			<!-- Edit Part 2 -->
 			<div id="main_template_contect">
-				<template></template>
+				<my-template
+					:title="title"
+					:content="content"
+					:contact="contact"
+					:logo="logo"
+				></my-template>
 			</div>
 
-			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 			<script src="https://unpkg.com/vue"></script>
-			<script>
-				 new Vue({
-			        el: '#main_template_contect',
-
-			  		components: { template },
-
-			        ready: function () {
-			            this.fetch();
-			        },
-
-			        methods: {
-			            fetch () {
-			                axios.post("/index.php")
-			                    .then(function (response) {
-			                        console.log(response);
-			                    })
-			                    .catch (function (error) {
-			                        console.log(error);
-			                    })
-			            }
-			        }
-		    	})
-			</script>
+			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+			<script src="/js/main.js"></script>
 
 			<!-- End Edit Part 2 -->
 

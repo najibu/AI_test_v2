@@ -10,63 +10,52 @@
 <!-- CONTENT TO BE DISPLAYED -->
 
 <div id="template">
-
     <div class="face face-back">
 
-    <table class="body-content" cellpadding="0" cellspacing="0">
-    <tbody>
-    <tr>
-        <td>
-            <img class="body-img" src="empty-1" />
-        </td>
-        <td class="h-spacer"></td>
-        <td>
-            <img class="body-img" src="empty-2" />
-        </td>
-    </tr>
-    <tr>
-        <td colspan="3">
-            <table cellspacing="0" cellpadding="0" class="copy-area">
-                <tbody>
+        <table class="body-content" cellpadding="0" cellspacing="0">
+            <tbody>
                 <tr>
                     <td>
-                        <h2 data-id="title"></h2>
-                        <span class="property-sub-header">Demo Template</span>
-                        <p class="half-body-text" data-id="content"></p>
-                        <p class="guide-price">www.addintel.co.uk</p>
+                        <img class="body-img" src="empty-1" />
                     </td>
-                    <td class="h-spacer">
-
-                    </td>
+                    <td class="h-spacer"></td>
                     <td>
-                        <div class="address-container">
-                            <img class="back-logo" src="" data-id="logo" />
-                            <span class="address" data-id="contact"></span>
-                        </div>
+                        <img class="body-img" src="empty-2" />
                     </td>
                 </tr>
-                </tbody>
-            </table>
-        </td>
-    </tr>
-    </tbody>
-</table>
+                <tr>
+                    <td colspan="3">
+                        <table cellspacing="0" cellpadding="0" class="copy-area">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h2 data-id="title">{{ title }}</h2>
+                                        <span class="property-sub-header">Demo Template</span>
+                                        <p class="half-body-text" data-id="content">{{ content }}</p>
+                                        <p class="guide-price">www.addintel.co.uk</p>
+                                    </td>
+                                    <td class="h-spacer">
 
+                                    </td>
+                                    <td>
+                                        <div class="address-container">
+                                            <img class="back-logo" :src="logo" data-id="logo" />
+                                            <span class="address" data-id="contact" v-html="contact"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="face face-front">
+        <img class="logo" :src="logo" data-id="logo" />
+    </div>
 </div>
-
-<div class="face face-front">
-    <img class="logo" src="" data-id="logo" />
-</div>
-
-</div>
-
-
-<script src="https://unpkg.com/vue"></script>
-<script>
-    Vue.component('template', {
-        template: '#template'
-    })
-</script>
 
 <!-- END CONTENT TO BE DISPLAYED -->
 
